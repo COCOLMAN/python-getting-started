@@ -22,6 +22,3 @@ def db(request):
 
 
     return render(request, "db.html", {"greetings": ["hello", "안녕하세요"]})
-
-
-bug
