@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-from .models import Greeting
 
 # Create your views here.
 
@@ -20,9 +19,6 @@ def db(request):
     # When running the app locally:
     #   1. You have run `./manage.py migrate` to create the `hello_greeting` database table.
 
-    greeting = Greeting()
-    greeting.save()
 
-    greetings = Greeting.objects.all()
 
-    return render(request, "db.html", {"greetings": greetings})
+    return render(request, "db.html", {"greetings": ["hello", "안녕하세요"]})
